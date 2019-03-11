@@ -1859,14 +1859,86 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      drawer: null
+      drawer: null,
+      items: [{
+        icon: 'trending_up',
+        text: 'Most Popular'
+      }, {
+        icon: 'subscriptions',
+        text: 'Subscriptions'
+      }, {
+        icon: 'history',
+        text: 'History'
+      }, {
+        icon: 'featured_play_list',
+        text: 'Playlists'
+      }, {
+        icon: 'watch_later',
+        text: 'Watch Later'
+      }],
+      items2: [{
+        picture: 28,
+        text: 'Joseph'
+      }, {
+        picture: 38,
+        text: 'Apple'
+      }, {
+        picture: 48,
+        text: 'Xbox Ahoy'
+      }, {
+        picture: 58,
+        text: 'Nokia'
+      }, {
+        picture: 78,
+        text: 'MKBHD'
+      }]
     };
   },
   props: {
     source: String
+  },
+  methods: {
+    showModal: function showModal() {
+      alert("this is a modal");
+    },
+    mounted: function mounted() {//
+    }
   }
 });
 
@@ -36968,7 +37040,7 @@ var render = function() {
       _c(
         "v-navigation-drawer",
         {
-          attrs: { fixed: "", app: "" },
+          attrs: { fixed: "", clipped: "", app: "" },
           model: {
             value: _vm.drawer,
             callback: function($$v) {
@@ -36982,16 +37054,92 @@ var render = function() {
             "v-list",
             { attrs: { dense: "" } },
             [
+              _vm._l(_vm.items, function(item) {
+                return _c(
+                  "v-list-tile",
+                  { key: item.text, on: { click: function($event) {} } },
+                  [
+                    _c(
+                      "v-list-tile-action",
+                      [_c("v-icon", [_vm._v(_vm._s(item.icon))])],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "v-list-tile-content",
+                      [
+                        _c("v-list-tile-title", [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(item.text) +
+                              "\n                    "
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "v-subheader",
+                { staticClass: "mt-3 grey--text text--darken-1" },
+                [_vm._v("SUBSCRIPTIONS")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list",
+                _vm._l(_vm.items2, function(item) {
+                  return _c(
+                    "v-list-tile",
+                    {
+                      key: item.text,
+                      attrs: { avatar: "" },
+                      on: { click: function($event) {} }
+                    },
+                    [
+                      _c("v-list-tile-avatar", [
+                        _c("img", {
+                          attrs: {
+                            src:
+                              "https://randomuser.me/api/portraits/men/" +
+                              item.picture +
+                              ".jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("v-list-tile-title", {
+                        domProps: { textContent: _vm._s(item.text) }
+                      })
+                    ],
+                    1
+                  )
+                }),
+                1
+              ),
+              _vm._v(" "),
               _c(
                 "v-list-tile",
-                { on: { click: function($event) {} } },
+                { staticClass: "mt-3", on: { click: function($event) {} } },
                 [
-                  _c("v-list-tile-action", [_c("v-icon", [_vm._v("home")])], 1),
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "grey darken-1" } }, [
+                        _vm._v("add_circle_outline")
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
-                    "v-list-tile-content",
-                    [_c("v-list-tile-title", [_vm._v("Home")])],
-                    1
+                    "v-list-tile-title",
+                    { staticClass: "grey--text text--darken-1" },
+                    [_vm._v("Browse Channels")]
                   )
                 ],
                 1
@@ -37003,20 +37151,24 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("contact_mail")])],
+                    [
+                      _c("v-icon", { attrs: { color: "grey darken-1" } }, [
+                        _vm._v("settings")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
                   _c(
-                    "v-list-tile-content",
-                    [_c("v-list-tile-title", [_vm._v("Contact")])],
-                    1
+                    "v-list-tile-title",
+                    { staticClass: "grey--text text--darken-1" },
+                    [_vm._v("Manage Subscriptions")]
                   )
                 ],
                 1
               )
             ],
-            1
+            2
           )
         ],
         1
@@ -37024,7 +37176,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-toolbar",
-        { attrs: { color: "indigo", dark: "", fixed: "", app: "" } },
+        { attrs: { color: "indigo", fixed: "", "clipped-left": "", app: "" } },
         [
           _c("v-toolbar-side-icon", {
             on: {
@@ -37035,7 +37187,34 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _c("v-toolbar-title", [_vm._v("Application")])
+          _c("v-icon", { staticClass: "mx-3" }, [_vm._v("fab fa-youtube")]),
+          _vm._v(" "),
+          _c("v-toolbar-title", { staticClass: "mr-5 align-center" }, [
+            _c("span", { staticClass: "title" }, [_vm._v("BlueTube")])
+          ]),
+          _vm._v(" "),
+          _c("v-spacer"),
+          _vm._v(" "),
+          _c(
+            "v-layout",
+            {
+              staticStyle: { "max-width": "650px" },
+              attrs: { row: "", "align-center": "" }
+            },
+            [
+              _c("v-text-field", {
+                attrs: {
+                  "append-icon-cb": function() {},
+                  placeholder: "Find more sadness...",
+                  "single-line": "",
+                  "append-icon": "search",
+                  color: "white",
+                  "hide-details": ""
+                }
+              })
+            ],
+            1
+          )
         ],
         1
       ),
@@ -37045,7 +37224,7 @@ var render = function() {
         [
           _c(
             "v-container",
-            { attrs: { fluid: "", "fill-height": "" } },
+            { attrs: { "fill-height": "" } },
             [
               _c(
                 "v-layout",
@@ -37053,84 +37232,11 @@ var render = function() {
                 [
                   _c(
                     "v-flex",
-                    { attrs: { "text-xs-center": "" } },
+                    { attrs: { shrink: "" } },
                     [
-                      _c(
-                        "v-tooltip",
-                        {
-                          attrs: { left: "" },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "activator",
-                              fn: function(ref) {
-                                var on = ref.on
-                                return [
-                                  _c(
-                                    "v-btn",
-                                    _vm._g(
-                                      {
-                                        attrs: {
-                                          href: _vm.source,
-                                          icon: "",
-                                          large: "",
-                                          target: "_blank"
-                                        }
-                                      },
-                                      on
-                                    ),
-                                    [
-                                      _c("v-icon", { attrs: { large: "" } }, [
-                                        _vm._v("code")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ]
-                              }
-                            }
-                          ])
-                        },
-                        [_vm._v(" "), _c("span", [_vm._v("Source")])]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tooltip",
-                        {
-                          attrs: { right: "" },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "activator",
-                              fn: function(ref) {
-                                var on = ref.on
-                                return [
-                                  _c(
-                                    "v-btn",
-                                    _vm._g(
-                                      {
-                                        attrs: {
-                                          icon: "",
-                                          large: "",
-                                          href:
-                                            "https://codepen.io/johnjleider/pen/rJdVMq",
-                                          target: "_blank"
-                                        }
-                                      },
-                                      on
-                                    ),
-                                    [
-                                      _c("v-icon", { attrs: { large: "" } }, [
-                                        _vm._v("mdi-codepen")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ]
-                              }
-                            }
-                          ])
-                        },
-                        [_vm._v(" "), _c("span", [_vm._v("Codepen")])]
-                      )
+                      _c("v-btn", { on: { click: _vm.showModal } }, [
+                        _vm._v("Show Modal")
+                      ])
                     ],
                     1
                   )
@@ -37142,11 +37248,7 @@ var render = function() {
           )
         ],
         1
-      ),
-      _vm._v(" "),
-      _c("v-footer", { attrs: { color: "indigo", app: "" } }, [
-        _c("span", { staticClass: "white--text" }, [_vm._v("© 2017")])
-      ])
+      )
     ],
     1
   )

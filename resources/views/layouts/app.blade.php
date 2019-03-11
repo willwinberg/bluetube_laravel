@@ -23,6 +23,7 @@
 </head>
 <body>
     <div id="app">
+        <v-app>
         <mast-nav-layout></mast-nav-layout>
         {{--<nav class="navbar navbar-expand-md navbar-light navbar-laravel">--}}
             {{--<div class="container">--}}
@@ -78,6 +79,7 @@
         {{--<main class="py-4">--}}
             {{--@yield('content')--}}
         {{--</main>--}}
+        </v-app>
     </div>
 </body>
 </html>
