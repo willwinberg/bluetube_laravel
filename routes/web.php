@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('layouts/app');
 });
 
+// add vue-router...
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
