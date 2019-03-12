@@ -70,7 +70,7 @@
             <v-container fill-height>
                 <v-layout justify-center align-center>
                     <v-flex shrink>
-                        <v-btn @click="showModal">Show Modal</v-btn>
+                        <!--<v-btn @click="showModal">Show Modal</v-btn>-->
                         <!--<v-tooltip right>-->
                             <!--<template v-slot:activator="{ on }">-->
                                 <!--<v-btn :href="source" icon large target="_blank" v-on="on">-->
@@ -123,6 +123,15 @@
             mounted() {
                 //
             }
-        }
+        },
+        computed: {
+            reversedMessage() {
+                // logic
+            },
+            lameedMessage() {
+                //
+            }
+        },
+
     }
 </script>

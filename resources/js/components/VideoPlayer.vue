@@ -3,7 +3,7 @@
         <v-card>
             <v-responsive :aspect-ratio="16/9">
                 <v-card-text>
-                    This card will always be 16:9 (unless you put more stuff in it)
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gZUSFda_W7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </v-card-text>
             </v-responsive>
         </v-card>
@@ -16,6 +16,6 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

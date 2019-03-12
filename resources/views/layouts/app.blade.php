@@ -24,7 +24,34 @@
 <body>
     <div id="app">
         <v-app>
-        <mast-nav-layout></mast-nav-layout>
+        <navigation></navigation>
+        <mast></mast>
+        <v-content>
+            <v-container fill-height>
+                <v-layout justify-center align-center>
+                    <v-flex shrink>
+                        <!--<v-btn @click="showModal">Show Modal</v-btn>-->
+                        <!--<v-tooltip right>-->
+                        <!--<template v-slot:activator="{ on }">-->
+                        <!--<v-btn :href="source" icon large target="_blank" v-on="on">-->
+                        <!--<v-icon large>code</v-icon>-->
+                        <!--</v-btn>-->
+                        <!--</template>-->
+                        <!--<span>Source</span>-->
+                        <!--</v-tooltip>-->
+                        <!--<v-tooltip right>-->
+                        <!--<template v-slot:activator="{ on }">-->
+                        <!--<v-btn icon large href="https://codepen.io/johnjleider/pen/YeRKwQ" target="_blank" v-on="on">-->
+                        <!--<v-icon large>mdi-codepen</v-icon>-->
+                        <!--</v-btn>-->
+                        <!--</template>-->
+                        <!--<span>Codepen</span>-->
+                        <!--</v-tooltip>-->
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-content>
+
         {{--<nav class="navbar navbar-expand-md navbar-light navbar-laravel">--}}
             {{--<div class="container">--}}
                 {{--<a class="navbar-brand" href="{{ url('/') }}">--}}

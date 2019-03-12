@@ -8,6 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.VueRouter = require('vue-router');
 window.Vuetify = require('vuetify');
 
 /**
@@ -21,11 +22,15 @@ window.Vuetify = require('vuetify');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+Vue.use(VueRouter);
 Vue.use(Vuetify);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('navigation', require('./components/navigation.vue').default);
 Vue.component('mast-nav-layout', require('./components/MastNavLayout.vue').default);
+Vue.component('navigation', require('./components/Navigation.vue').default);
+Vue.component('mast', require('./components/Mast.vue').default);
+Vue.component('video-player', require('./components/VideoPlayer.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
