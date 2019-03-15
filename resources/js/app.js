@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 window.VueRouter = require('vue-router');
 window.Vuetify = require('vuetify');
@@ -25,8 +26,6 @@ window.Vuetify = require('vuetify');
 Vue.use(VueRouter);
 Vue.use(Vuetify);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-// Vue.component('navigation', require('./components/navigation.vue').default);
 Vue.component('mast-nav-layout', require('./components/MastNavLayout.vue').default);
 Vue.component('navigation', require('./components/Navigation.vue').default);
 Vue.component('mast', require('./components/Mast.vue').default);
